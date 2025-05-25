@@ -16,6 +16,7 @@ import TextStyle from "@tiptap/extension-text-style";
 import { Color } from "@tiptap/extension-color";
 import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
+import TextAlign from "@tiptap/extension-text-align";
 import { useEditorStore } from "@/store/use-editor-store";
 
 export const Editor = () => {
@@ -74,6 +75,9 @@ export const Editor = () => {
       }),
       Highlight.configure({
         multicolor: true,
+      }),
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
       }),
     ],
     content: `
